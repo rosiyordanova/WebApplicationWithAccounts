@@ -1,0 +1,20 @@
+﻿@model WebApplicationWithAccounts.Models.CreateRoleViewModel
+
+@{
+    ViewData["Title"] = "Roles";
+}
+
+<h2>Adding a role</h2>
+
+<form asp-action="Create" method="post">
+    <div class="mb-3">
+        <label class="form-label" asp-for="RoleName">
+            Role name:
+        </label>    
+        <input asp-for="RoleName" class="form-control" required />
+        <span asp-for="RoleName" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Create</button>
+</form>
+
+<a asp-action="Index" class="btn btn-secondary">Back to roles</a>
